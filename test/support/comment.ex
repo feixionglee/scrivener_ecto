@@ -4,6 +4,7 @@ defmodule Scrivener.Ecto.Comment do
   schema "comments" do
     field :body, :string
 
+    belongs_to :author, Scrivener.Ecto.Author
     belongs_to :post, Scrivener.Ecto.Post
 
     timestamps
